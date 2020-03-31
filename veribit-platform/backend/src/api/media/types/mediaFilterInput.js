@@ -2,6 +2,7 @@ const schema = `
   input MediaFilterInput {
     id: String
     txid: String
+    description: String
     createdAtRange: [ DateTime ]
   }
 `;

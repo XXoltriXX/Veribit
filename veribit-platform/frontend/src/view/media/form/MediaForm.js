@@ -10,12 +10,17 @@ import FormWrapper, {
 } from 'view/shared/styles/FormWrapper';
 import FormSchema from 'view/shared/form/formSchema';
 import InputFormItem from 'view/shared/form/items/InputFormItem';
+import ImagesFormItem from 'view/shared/form/items/ImagesFormItem';
+import FilesFormItem from 'view/shared/form/items/FilesFormItem';
 
 const { fields } = model;
 
 class MediaForm extends Component {
   schema = new FormSchema(fields.id, [
     fields.txid,
+    fields.files,
+    fields.images,
+    fields.description,
   ]);
 
   handleSubmit = (values) => {
@@ -52,6 +57,32 @@ class MediaForm extends Component {
                   label={fields.txid.label}
                   required={fields.txid.required}
                   autoFocus
+                />
+                <FilesFormItem
+                  name={fields.files.name}
+                  label={fields.files.label}
+                  required={fields.files.required}
+                  path={fields.files.path}
+                  schema={{
+                    size: fields.files.size,
+                    formats: fields.files.formats,
+                  }}
+                  max={fields.files.max}
+                />
+                <ImagesFormItem
+                  name={fields.images.name}
+                  label={fields.images.label}
+                  required={fields.images.required}
+                  path={fields.images.path}
+                  schema={{
+                    size: fields.images.size,
+                  }}
+                  max={fields.images.max}
+                />
+                <InputFormItem
+                  name={fields.description.name}
+                  label={fields.description.label}
+                  required={fields.description.required}
                 />
 
                 <Form.Item

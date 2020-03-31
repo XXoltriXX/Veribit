@@ -10,6 +10,10 @@ const PartnerSchema = new Schema(
     txid: {
       type: String,
     },
+    list: [{
+      type: Schema.Types.ObjectId,
+      ref: 'user',
+    }],
     createdBy: {
       type: Schema.Types.ObjectId,
       ref: 'user',

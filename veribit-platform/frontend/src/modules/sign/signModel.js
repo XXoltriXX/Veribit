@@ -3,6 +3,7 @@ import IdField from 'modules/shared/fields/idField';
 import DateTimeField from 'modules/shared/fields/dateTimeField';
 import DateTimeRangeField from 'modules/shared/fields/dateTimeRangeField';
 import StringField from 'modules/shared/fields/stringField';
+import FilesField from 'modules/shared/fields/filesField';
 
 function label(name) {
   return i18n(`entities.sign.fields.${name}`);
@@ -11,6 +12,7 @@ function label(name) {
 const fields = {
   id: new IdField('id', label('id')),
   txid: new StringField('txid', label('txid'), {}),
+  documents: new FilesField('documents', label('documents'), 'sign/documents',{}),
   createdAt: new DateTimeField(
     'createdAt',
     label('createdAt'),

@@ -1,5 +1,6 @@
 const database = require('../database');
 const Schema = database.Schema;
+const { FileSchema } = require('./file');
 
 /**
  * Sign database schema.
@@ -10,6 +11,7 @@ const SignSchema = new Schema(
     txid: {
       type: String,
     },
+    documents: [FileSchema],
     createdBy: {
       type: Schema.Types.ObjectId,
       ref: 'user',

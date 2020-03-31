@@ -202,7 +202,12 @@ class CustomerRepository {
         }
       }
 
-
+      if (filter.gender) {
+        criteria = {
+          ...criteria,
+          gender: filter.gender
+        };
+      }
 
       if (filter.createdAtRange) {
         const [start, end] = filter.createdAtRange;

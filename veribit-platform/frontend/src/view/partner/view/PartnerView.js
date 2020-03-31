@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Spinner from 'view/shared/Spinner';
 import ViewWrapper from 'view/shared/styles/ViewWrapper';
 import TextViewItem from 'view/shared/view/TextViewItem';
-
+import UserViewItem from 'view/iam/view/UserViewItem';
 
 const { fields } = model;
 
@@ -21,6 +21,11 @@ class PartnerView extends Component {
         <TextViewItem
           label={fields.txid.label}
           value={fields.txid.forView(record.txid)}
+        />
+
+        <UserViewItem
+          label={fields.list.label}
+          value={fields.list.forView(record.list)}
         />
 
         <TextViewItem

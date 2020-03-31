@@ -50,6 +50,8 @@ class Permissions {
 
           roles.orderEditor,
           roles.orderViewer,
+          roles.partnerEditor,
+          roles.partnerViewer,
         ],
       },
       auditLogRead: {
@@ -60,193 +62,65 @@ class Permissions {
         id: 'settingsEdit',
         allowedRoles: [roles.owner],
       },
-      customerImport: {
-        id: 'customerImport',
+      appsImport: {
+        id: 'appsImport',
         allowedRoles: [
           roles.owner,
           roles.editor,
           roles.entityEditor,
-          roles.customerEditor,
+          roles.appsEditor,
         ],
       },
-      customerCreate: {
-        id: 'customerCreate',
+      appsCreate: {
+        id: 'appsCreate',
         allowedRoles: [
           roles.owner,
           roles.editor,
           roles.entityEditor,
-          roles.customerEditor,
+          roles.appsEditor,
         ],
-        allowedStorageFolders: ['customer'],
+        allowedStorageFolders: ['apps'],
       },
-      customerEdit: {
-        id: 'customerEdit',
+      appsEdit: {
+        id: 'appsEdit',
         allowedRoles: [
           roles.owner,
           roles.editor,
           roles.entityEditor,
-          roles.customerEditor,
+          roles.appsEditor,
         ],
-        allowedStorageFolders: ['customer'],
+        allowedStorageFolders: ['apps'],
       },
-      customerDestroy: {
-        id: 'customerDestroy',
+      appsDestroy: {
+        id: 'appsDestroy',
         allowedRoles: [
           roles.owner,
           roles.editor,
           roles.entityEditor,
-          roles.customerEditor,
+          roles.appsEditor,
         ],
-        allowedStorageFolders: ['customer'],
+        allowedStorageFolders: ['apps'],
       },
-      customerRead: {
-        id: 'customerRead',
+      appsRead: {
+        id: 'appsRead',
         allowedRoles: [
           roles.owner,
           roles.editor,
           roles.viewer,
           roles.entityEditor,
-          roles.customerEditor,
-          roles.customerViewer,
+          roles.appsEditor,
+          roles.appsViewer,
         ],
       },
-      customerAutocomplete: {
-        id: 'customerAutocomplete',
+      appsAutocomplete: {
+        id: 'appsAutocomplete',
         allowedRoles: [
           roles.owner,
           roles.editor,
           roles.viewer,
           roles.entityEditor,
-          roles.customerEditor,
-          roles.customerViewer,
-          roles.orderEditor,
-          roles.orderViewer,
-        ],
-      },
-
-      productImport: {
-        id: 'productImport',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.entityEditor,
-          roles.productEditor,
-        ],
-      },
-      productCreate: {
-        id: 'productCreate',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.entityEditor,
-          roles.productEditor,
-        ],
-        allowedStorageFolders: ['product'],
-      },
-      productEdit: {
-        id: 'productEdit',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.entityEditor,
-          roles.productEditor,
-        ],
-        allowedStorageFolders: ['product'],
-      },
-      productDestroy: {
-        id: 'productDestroy',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.entityEditor,
-          roles.productEditor,
-        ],
-        allowedStorageFolders: ['product'],
-      },
-      productRead: {
-        id: 'productRead',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.viewer,
-          roles.entityEditor,
-          roles.productEditor,
-          roles.productViewer,
-        ],
-      },
-      productAutocomplete: {
-        id: 'productAutocomplete',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.viewer,
-          roles.entityEditor,
-          roles.productEditor,
-          roles.productViewer,
-          roles.orderEditor,
-          roles.orderViewer,
-        ],
-      },
-
-      orderImport: {
-        id: 'orderImport',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.entityEditor,
-          roles.orderEditor,
-        ],
-      },
-      orderCreate: {
-        id: 'orderCreate',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.entityEditor,
-          roles.orderEditor,
-        ],
-        allowedStorageFolders: ['order'],
-      },
-      orderEdit: {
-        id: 'orderEdit',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.entityEditor,
-          roles.orderEditor,
-        ],
-        allowedStorageFolders: ['order'],
-      },
-      orderDestroy: {
-        id: 'orderDestroy',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.entityEditor,
-          roles.orderEditor,
-        ],
-        allowedStorageFolders: ['order'],
-      },
-      orderRead: {
-        id: 'orderRead',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.viewer,
-          roles.entityEditor,
-          roles.orderEditor,
-          roles.orderViewer,
-        ],
-      },
-      orderAutocomplete: {
-        id: 'orderAutocomplete',
-        allowedRoles: [
-          roles.owner,
-          roles.editor,
-          roles.viewer,
-          roles.entityEditor,
-          roles.orderEditor,
-          roles.orderViewer,
+          roles.appsEditor,
+          roles.appsViewer,
 
         ],
       },
@@ -440,6 +314,133 @@ class Permissions {
         ],
       },
 
+      productImport: {
+        id: 'productImport',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.productEditor,
+        ],
+      },
+      productCreate: {
+        id: 'productCreate',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.productEditor,
+        ],
+        allowedStorageFolders: ['product'],
+      },
+      productEdit: {
+        id: 'productEdit',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.productEditor,
+        ],
+        allowedStorageFolders: ['product'],
+      },
+      productDestroy: {
+        id: 'productDestroy',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.productEditor,
+        ],
+        allowedStorageFolders: ['product'],
+      },
+      productRead: {
+        id: 'productRead',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.viewer,
+          roles.entityEditor,
+          roles.productEditor,
+          roles.productViewer,
+        ],
+      },
+      productAutocomplete: {
+        id: 'productAutocomplete',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.viewer,
+          roles.entityEditor,
+          roles.productEditor,
+          roles.productViewer,
+          roles.orderEditor,
+          roles.orderViewer,
+        ],
+      },
+
+      orderImport: {
+        id: 'orderImport',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.orderEditor,
+        ],
+      },
+      orderCreate: {
+        id: 'orderCreate',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.orderEditor,
+        ],
+        allowedStorageFolders: ['order'],
+      },
+      orderEdit: {
+        id: 'orderEdit',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.orderEditor,
+        ],
+        allowedStorageFolders: ['order'],
+      },
+      orderDestroy: {
+        id: 'orderDestroy',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.orderEditor,
+        ],
+        allowedStorageFolders: ['order'],
+      },
+      orderRead: {
+        id: 'orderRead',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.viewer,
+          roles.entityEditor,
+          roles.orderEditor,
+          roles.orderViewer,
+        ],
+      },
+      orderAutocomplete: {
+        id: 'orderAutocomplete',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.viewer,
+          roles.entityEditor,
+          roles.orderEditor,
+          roles.orderViewer,
+
+        ],
+      },
+
       partnerImport: {
         id: 'partnerImport',
         allowedRoles: [
@@ -500,6 +501,70 @@ class Permissions {
           roles.partnerEditor,
           roles.partnerViewer,
 
+        ],
+      },
+
+      customerImport: {
+        id: 'customerImport',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.customerEditor,
+        ],
+      },
+      customerCreate: {
+        id: 'customerCreate',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.customerEditor,
+        ],
+        allowedStorageFolders: ['customer'],
+      },
+      customerEdit: {
+        id: 'customerEdit',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.customerEditor,
+        ],
+        allowedStorageFolders: ['customer'],
+      },
+      customerDestroy: {
+        id: 'customerDestroy',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.entityEditor,
+          roles.customerEditor,
+        ],
+        allowedStorageFolders: ['customer'],
+      },
+      customerRead: {
+        id: 'customerRead',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.viewer,
+          roles.entityEditor,
+          roles.customerEditor,
+          roles.customerViewer,
+        ],
+      },
+      customerAutocomplete: {
+        id: 'customerAutocomplete',
+        allowedRoles: [
+          roles.owner,
+          roles.editor,
+          roles.viewer,
+          roles.entityEditor,
+          roles.customerEditor,
+          roles.customerViewer,
+          roles.orderEditor,
+          roles.orderViewer,
         ],
       },
     };

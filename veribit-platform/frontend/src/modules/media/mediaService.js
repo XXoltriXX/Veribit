@@ -85,6 +85,21 @@ export default class MediaService {
           mediaFind(id: $id) {
             id
             txid
+            files {
+              id
+              name
+              sizeInBytes
+              publicUrl
+              privateUrl
+            }
+            images {
+              id
+              name
+              sizeInBytes
+              publicUrl
+              privateUrl
+            }
+            description
             createdAt
             updatedAt
           }
@@ -118,6 +133,21 @@ export default class MediaService {
             rows {
               id
               txid
+              files {
+                id
+                name
+                sizeInBytes
+                publicUrl
+                privateUrl
+              }
+              images {
+                id
+                name
+                sizeInBytes
+                publicUrl
+                privateUrl
+              }
+              description
               updatedAt
               createdAt
             }

@@ -1,5 +1,6 @@
 const database = require('../database');
 const Schema = database.Schema;
+const { FileSchema } = require('./file');
 
 /**
  * Media database schema.
@@ -8,6 +9,11 @@ const Schema = database.Schema;
 const MediaSchema = new Schema(
   {
     txid: {
+      type: String,
+    },
+    files: [FileSchema],
+    images: [FileSchema],
+    description: {
       type: String,
     },
     createdBy: {

@@ -1,6 +1,9 @@
 const schema = `
   input MediaInput {
     txid: String
+    files: [ FileInput! ]
+    images: [ FileInput! ]
+    description: String
   }
 `;
 

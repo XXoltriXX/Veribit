@@ -1,6 +1,7 @@
 const schema = `
   input PartnerInput {
     txid: String
+    list: [ String! ]
   }
 `;
 

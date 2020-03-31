@@ -1,6 +1,7 @@
 const schema = `
   input SignInput {
     txid: String
+    documents: [ FileInput! ]
   }
 `;
 

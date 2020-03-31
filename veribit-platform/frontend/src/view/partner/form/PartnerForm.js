@@ -10,12 +10,14 @@ import FormWrapper, {
 } from 'view/shared/styles/FormWrapper';
 import FormSchema from 'view/shared/form/formSchema';
 import InputFormItem from 'view/shared/form/items/InputFormItem';
+import UserAutocompleteFormItem from 'view/iam/autocomplete/UserAutocompleteFormItem';
 
 const { fields } = model;
 
 class PartnerForm extends Component {
   schema = new FormSchema(fields.id, [
     fields.txid,
+    fields.list,
   ]);
 
   handleSubmit = (values) => {
@@ -52,6 +54,14 @@ class PartnerForm extends Component {
                   label={fields.txid.label}
                   required={fields.txid.required}
                   autoFocus
+                />
+                <UserAutocompleteFormItem
+                  name={fields.list.name}
+                  label={fields.list.label}
+                  required={fields.list.required}
+                  showCreate={!this.props.modal}
+                  form={form}
+                  mode="multiple"
                 />
 
                 <Form.Item

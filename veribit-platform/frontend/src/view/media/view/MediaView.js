@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Spinner from 'view/shared/Spinner';
 import ViewWrapper from 'view/shared/styles/ViewWrapper';
 import TextViewItem from 'view/shared/view/TextViewItem';
-
+import ImagesViewItem from 'view/shared/view/ImagesViewItem';
+import FilesViewItem from 'view/shared/view/FilesViewItem';
 
 const { fields } = model;
 
@@ -21,6 +22,21 @@ class MediaView extends Component {
         <TextViewItem
           label={fields.txid.label}
           value={fields.txid.forView(record.txid)}
+        />
+
+        <FilesViewItem
+          label={fields.files.label}
+          value={fields.files.forView(record.files)}
+        />
+
+        <ImagesViewItem
+          label={fields.images.label}
+          value={fields.images.forView(record.images)}
+        />
+
+        <TextViewItem
+          label={fields.description.label}
+          value={fields.description.forView(record.description)}
         />
 
         <TextViewItem

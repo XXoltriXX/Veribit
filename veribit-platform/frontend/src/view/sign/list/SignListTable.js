@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import TableWrapper from 'view/shared/styles/TableWrapper';
 import ButtonLink from 'view/shared/styles/ButtonLink';
-
+import FilesListView from 'view/shared/list/FileListView';
 
 const { fields } = model;
 
@@ -32,6 +32,9 @@ class SignListTable extends Component {
   columns = [
     fields.id.forTable(),
     fields.txid.forTable(),
+    fields.documents.forTable({
+      render: (value) => <FilesListView value={value} />,
+    }),
     fields.createdAt.forTable(),
     {
       title: '',

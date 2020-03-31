@@ -26,55 +26,207 @@ const en = {
   },
 
   entities: {
-    customer: {
-      name: 'customer',
-      label: 'Customers',
-      menu: 'Customers',
-      exporterFileName: 'customer_export',
+    apps: {
+      name: 'apps',
+      label: 'Apps',
+      menu: 'Apps',
+      exporterFileName: 'apps_export',
       list: {
-        menu: 'Customers',
-        title: 'Customers',
+        menu: 'Apps',
+        title: 'Apps',
       },
       create: {
-        success: 'Customer saved successfully',
+        success: 'Apps saved successfully',
       },
       update: {
-        success: 'Customer saved successfully',
+        success: 'Apps saved successfully',
       },
       destroy: {
-        success: 'Customer deleted successfully',
+        success: 'Apps deleted successfully',
       },
       destroyAll: {
-        success: 'Customer(s) deleted successfully',
+        success: 'Apps(s) deleted successfully',
       },
       edit: {
-        title: 'Edit Customer',
+        title: 'Edit Apps',
       },
       fields: {
         id: 'Id',
-        'name': 'Name',
-        'birthdateRange': 'Birthdate',
-        'birthdate': 'Birthdate',
-        'gender': 'Gender',
+        'novi': 'Novi',
+        'levo': 'Levo',
+        'nosco': 'Nosco',
+        'scio': 'Scio',
+        'disco': 'Disco',
+        'indicium': 'Indicium',
+        'specto': 'Specto',
+        'intelligo': 'Intelligo',
+        'teneo': 'Teneo',
+        'percipio': 'Percipio',
+        'antikythera': 'Antikythera',
         createdAt: 'Created at',
         updatedAt: 'Updated at',
         createdAtRange: 'Created at',
       },
       enumerators: {
-        'gender': {
-          'male': 'Male',
-          'female': 'Female',
-        },
+
       },
       new: {
-        title: 'New Customer',
+        title: 'New Apps',
       },
       view: {
-        title: 'View Customer',
+        title: 'View Apps',
       },
       importer: {
-        title: 'Import Customers',
-        fileName: 'customer_import_template',
+        title: 'Import Apps',
+        fileName: 'apps_import_template',
+        hint:
+          'Files/Images columns must be the URLs of the files separated by space.',
+      },
+    },
+
+    media: {
+      name: 'media',
+      label: 'Media',
+      menu: 'Media',
+      exporterFileName: 'media_export',
+      list: {
+        menu: 'Media',
+        title: 'Media',
+      },
+      create: {
+        success: 'Media saved successfully',
+      },
+      update: {
+        success: 'Media saved successfully',
+      },
+      destroy: {
+        success: 'Media deleted successfully',
+      },
+      destroyAll: {
+        success: 'Media(s) deleted successfully',
+      },
+      edit: {
+        title: 'Edit Media',
+      },
+      fields: {
+        id: 'Id',
+        'txid': 'Location',
+        'files': 'Files',
+        'images': 'Images',
+        'description': 'Description',
+        createdAt: 'Created at',
+        updatedAt: 'Updated at',
+        createdAtRange: 'Created at',
+      },
+      enumerators: {
+
+      },
+      new: {
+        title: 'New Media',
+      },
+      view: {
+        title: 'View Media',
+      },
+      importer: {
+        title: 'Import Media',
+        fileName: 'media_import_template',
+        hint:
+          'Files/Images columns must be the URLs of the files separated by space.',
+      },
+    },
+
+    sign: {
+      name: 'sign',
+      label: 'Signs',
+      menu: 'Signs',
+      exporterFileName: 'sign_export',
+      list: {
+        menu: 'Signs',
+        title: 'Signs',
+      },
+      create: {
+        success: 'Sign saved successfully',
+      },
+      update: {
+        success: 'Sign saved successfully',
+      },
+      destroy: {
+        success: 'Sign deleted successfully',
+      },
+      destroyAll: {
+        success: 'Sign(s) deleted successfully',
+      },
+      edit: {
+        title: 'Edit Sign',
+      },
+      fields: {
+        id: 'Id',
+        'txid': 'Location',
+        'documents': 'Documents',
+        createdAt: 'Created at',
+        updatedAt: 'Updated at',
+        createdAtRange: 'Created at',
+      },
+      enumerators: {
+
+      },
+      new: {
+        title: 'New Sign',
+      },
+      view: {
+        title: 'View Sign',
+      },
+      importer: {
+        title: 'Import Signs',
+        fileName: 'sign_import_template',
+        hint:
+          'Files/Images columns must be the URLs of the files separated by space.',
+      },
+    },
+
+    share: {
+      name: 'share',
+      label: 'Share',
+      menu: 'Share',
+      exporterFileName: 'share_export',
+      list: {
+        menu: 'Share',
+        title: 'Share',
+      },
+      create: {
+        success: 'Share saved successfully',
+      },
+      update: {
+        success: 'Share saved successfully',
+      },
+      destroy: {
+        success: 'Share deleted successfully',
+      },
+      destroyAll: {
+        success: 'Share(s) deleted successfully',
+      },
+      edit: {
+        title: 'Edit Share',
+      },
+      fields: {
+        id: 'Id',
+        'txid': 'Location',
+        createdAt: 'Created at',
+        updatedAt: 'Updated at',
+        createdAtRange: 'Created at',
+      },
+      enumerators: {
+
+      },
+      new: {
+        title: 'New Share',
+      },
+      view: {
+        title: 'View Share',
+      },
+      importer: {
+        title: 'Import Share',
+        fileName: 'share_import_template',
         hint:
           'Files/Images columns must be the URLs of the files separated by space.',
       },
@@ -184,150 +336,6 @@ const en = {
       },
     },
 
-    media: {
-      name: 'media',
-      label: 'Media',
-      menu: 'Media',
-      exporterFileName: 'media_export',
-      list: {
-        menu: 'Media',
-        title: 'Media',
-      },
-      create: {
-        success: 'Media saved successfully',
-      },
-      update: {
-        success: 'Media saved successfully',
-      },
-      destroy: {
-        success: 'Media deleted successfully',
-      },
-      destroyAll: {
-        success: 'Media(s) deleted successfully',
-      },
-      edit: {
-        title: 'Edit Media',
-      },
-      fields: {
-        id: 'Id',
-        'txid': 'Location',
-        createdAt: 'Created at',
-        updatedAt: 'Updated at',
-        createdAtRange: 'Created at',
-      },
-      enumerators: {
-
-      },
-      new: {
-        title: 'New Media',
-      },
-      view: {
-        title: 'View Media',
-      },
-      importer: {
-        title: 'Import Media',
-        fileName: 'media_import_template',
-        hint:
-          'Files/Images columns must be the URLs of the files separated by space.',
-      },
-    },
-
-    sign: {
-      name: 'sign',
-      label: 'Signs',
-      menu: 'Signs',
-      exporterFileName: 'sign_export',
-      list: {
-        menu: 'Signs',
-        title: 'Signs',
-      },
-      create: {
-        success: 'Sign saved successfully',
-      },
-      update: {
-        success: 'Sign saved successfully',
-      },
-      destroy: {
-        success: 'Sign deleted successfully',
-      },
-      destroyAll: {
-        success: 'Sign(s) deleted successfully',
-      },
-      edit: {
-        title: 'Edit Sign',
-      },
-      fields: {
-        id: 'Id',
-        'txid': 'Location',
-        createdAt: 'Created at',
-        updatedAt: 'Updated at',
-        createdAtRange: 'Created at',
-      },
-      enumerators: {
-
-      },
-      new: {
-        title: 'New Sign',
-      },
-      view: {
-        title: 'View Sign',
-      },
-      importer: {
-        title: 'Import Signs',
-        fileName: 'sign_import_template',
-        hint:
-          'Files/Images columns must be the URLs of the files separated by space.',
-      },
-    },
-
-    share: {
-      name: 'share',
-      label: 'Share',
-      menu: 'Share',
-      exporterFileName: 'share_export',
-      list: {
-        menu: 'Share',
-        title: 'Share',
-      },
-      create: {
-        success: 'Share saved successfully',
-      },
-      update: {
-        success: 'Share saved successfully',
-      },
-      destroy: {
-        success: 'Share deleted successfully',
-      },
-      destroyAll: {
-        success: 'Share(s) deleted successfully',
-      },
-      edit: {
-        title: 'Edit Share',
-      },
-      fields: {
-        id: 'Id',
-        'txid': 'Location',
-        createdAt: 'Created at',
-        updatedAt: 'Updated at',
-        createdAtRange: 'Created at',
-      },
-      enumerators: {
-
-      },
-      new: {
-        title: 'New Share',
-      },
-      view: {
-        title: 'View Share',
-      },
-      importer: {
-        title: 'Import Share',
-        fileName: 'share_import_template',
-        hint:
-          'Files/Images columns must be the URLs of the files separated by space.',
-      },
-    },
-
     partner: {
       name: 'partner',
       label: 'Partners',
@@ -355,6 +363,7 @@ const en = {
       fields: {
         id: 'Id',
         'txid': 'Location',
+        'list': 'List',
         createdAt: 'Created at',
         updatedAt: 'Updated at',
         createdAtRange: 'Created at',
@@ -371,6 +380,60 @@ const en = {
       importer: {
         title: 'Import Partners',
         fileName: 'partner_import_template',
+        hint:
+          'Files/Images columns must be the URLs of the files separated by space.',
+      },
+    },
+
+    customer: {
+      name: 'customer',
+      label: 'Customers',
+      menu: 'Customers',
+      exporterFileName: 'customer_export',
+      list: {
+        menu: 'Customers',
+        title: 'Customers',
+      },
+      create: {
+        success: 'Customer saved successfully',
+      },
+      update: {
+        success: 'Customer saved successfully',
+      },
+      destroy: {
+        success: 'Customer deleted successfully',
+      },
+      destroyAll: {
+        success: 'Customer(s) deleted successfully',
+      },
+      edit: {
+        title: 'Edit Customer',
+      },
+      fields: {
+        id: 'Id',
+        'name': 'Name',
+        'birthdateRange': 'Birthdate',
+        'birthdate': 'Birthdate',
+        'gender': 'Gender',
+        createdAt: 'Created at',
+        updatedAt: 'Updated at',
+        createdAtRange: 'Created at',
+      },
+      enumerators: {
+        'gender': {
+          'male': 'Male',
+          'female': 'Female',
+        },
+      },
+      new: {
+        title: 'New Customer',
+      },
+      view: {
+        title: 'View Customer',
+      },
+      importer: {
+        title: 'Import Customers',
+        fileName: 'customer_import_template',
         hint:
           'Files/Images columns must be the URLs of the files separated by space.',
       },
@@ -448,29 +511,13 @@ const en = {
       label: 'Entity Viewer',
       description: 'View access to all entities',
     },
-    customerEditor: {
-      label: 'Customer Editor',
-      description: 'Edit access to Customers',
+    appsEditor: {
+      label: 'Apps Editor',
+      description: 'Edit access to Apps',
     },
-    customerViewer: {
-      label: 'Customer Viewer',
-      description: 'View access to Customers',
-    },
-    productEditor: {
-      label: 'Product Editor',
-      description: 'Edit access to Products',
-    },
-    productViewer: {
-      label: 'Product Viewer',
-      description: 'View access to Products',
-    },
-    orderEditor: {
-      label: 'Order Editor',
-      description: 'Edit access to Orders',
-    },
-    orderViewer: {
-      label: 'Order Viewer',
-      description: 'View access to Orders',
+    appsViewer: {
+      label: 'Apps Viewer',
+      description: 'View access to Apps',
     },
     mediaEditor: {
       label: 'Media Editor',
@@ -496,6 +543,22 @@ const en = {
       label: 'Share Viewer',
       description: 'View access to Share',
     },
+    productEditor: {
+      label: 'Product Editor',
+      description: 'Edit access to Products',
+    },
+    productViewer: {
+      label: 'Product Viewer',
+      description: 'View access to Products',
+    },
+    orderEditor: {
+      label: 'Order Editor',
+      description: 'Edit access to Orders',
+    },
+    orderViewer: {
+      label: 'Order Viewer',
+      description: 'View access to Orders',
+    },
     partnerEditor: {
       label: 'Partner Editor',
       description: 'Edit access to Partners',
@@ -503,6 +566,14 @@ const en = {
     partnerViewer: {
       label: 'Partner Viewer',
       description: 'View access to Partners',
+    },
+    customerEditor: {
+      label: 'Customer Editor',
+      description: 'Edit access to Customers',
+    },
+    customerViewer: {
+      label: 'Customer Viewer',
+      description: 'View access to Customers',
     },
   },
 

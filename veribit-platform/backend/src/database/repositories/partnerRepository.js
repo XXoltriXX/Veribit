@@ -123,7 +123,8 @@ class PartnerRepository {
    */
   async findById(id, options) {
     return MongooseRepository.wrapWithSessionIfExists(
-      Partner.findById(id),
+      Partner.findById(id)
+      .populate('list'),
       options,
     );
   }
@@ -207,7 +208,8 @@ class PartnerRepository {
     const rows = await Partner.find(criteria)
       .skip(skip)
       .limit(limitEscaped)
-      .sort(sort);
+      .sort(sort)
+      .populate('list');
 
     const count = await Partner.countDocuments(criteria);
 

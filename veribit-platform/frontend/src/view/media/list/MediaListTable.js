@@ -11,7 +11,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import TableWrapper from 'view/shared/styles/TableWrapper';
 import ButtonLink from 'view/shared/styles/ButtonLink';
-
+import ImagesListView from 'view/shared/list/ImagesListView';
+import FilesListView from 'view/shared/list/FileListView';
 
 const { fields } = model;
 
@@ -32,6 +33,13 @@ class MediaListTable extends Component {
   columns = [
     fields.id.forTable(),
     fields.txid.forTable(),
+    fields.files.forTable({
+      render: (value) => <FilesListView value={value} />,
+    }),
+    fields.images.forTable({
+      render: (value) => <ImagesListView value={value} />,
+    }),
+    fields.description.forTable(),
     fields.createdAt.forTable(),
     {
       title: '',

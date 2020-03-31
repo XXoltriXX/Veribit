@@ -21,6 +21,7 @@ const schema = new FormFilterSchema([
   fields.id,
   fields.createdAtRange,
   fields.txid,
+  fields.description,
 ]);
 
 class MediaListFilter extends Component {
@@ -80,6 +81,13 @@ class MediaListFilter extends Component {
                     <InputFormItem
                       name={fields.txid.name}
                       label={fields.txid.label}
+                      layout={formItemLayout}
+                    />
+                  </Col>
+                  <Col md={24} lg={12}>
+                    <InputFormItem
+                      name={fields.description.name}
+                      label={fields.description.label}
                       layout={formItemLayout}
                     />
                   </Col>

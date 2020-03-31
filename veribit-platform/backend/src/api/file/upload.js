@@ -114,6 +114,39 @@ const mapAllUploadRequests = (
   );
 
   app.post(
+        prefix + '/upload/media/files',
+        databaseMiddleware,
+        authMiddleware,
+        request('media/files', {
+          entity: 'media',
+          maxFileSize: undefined,
+          folderIncludesAuthenticationUid: false,
+        }),
+      );
+
+  app.post(
+        prefix + '/upload/media/images',
+        databaseMiddleware,
+        authMiddleware,
+        request('media/images', {
+          entity: 'media',
+          maxFileSize: undefined,
+          folderIncludesAuthenticationUid: false,
+        }),
+      );
+
+  app.post(
+        prefix + '/upload/sign/documents',
+        databaseMiddleware,
+        authMiddleware,
+        request('sign/documents', {
+          entity: 'sign',
+          maxFileSize: undefined,
+          folderIncludesAuthenticationUid: false,
+        }),
+      );
+
+  app.post(
         prefix + '/upload/product/photos',
         databaseMiddleware,
         authMiddleware,

@@ -1,6 +1,6 @@
 {
   "name": "Veribit",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "description": "Veribit Backend",
   "main": "src/app.js",
   "scripts": {
@@ -26,7 +26,7 @@
   "private": true,
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RoyMurphy/Veribit/eribit-be/issues"
+    "url": "https://github.com/RoyMurphy/Veribit/veribit-be/issues"
   },
   "homepage": "https://github.com/RoyMurphy/Veribit/veribit-be#readme",
   "dependencies": {

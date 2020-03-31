@@ -23,17 +23,9 @@ const auditLogTypes = require('./auditLog/types');
 const auditLogQueries = require('./auditLog/queries');
 const auditLogMutations = require('./auditLog/mutations');
 
-const customerTypes = require('./customer/types');
-const customerQueries = require('./customer/queries');
-const customerMutations = require('./customer/mutations');
-
-const productTypes = require('./product/types');
-const productQueries = require('./product/queries');
-const productMutations = require('./product/mutations');
-
-const orderTypes = require('./order/types');
-const orderQueries = require('./order/queries');
-const orderMutations = require('./order/mutations');
+const appsTypes = require('./apps/types');
+const appsQueries = require('./apps/queries');
+const appsMutations = require('./apps/mutations');
 
 const mediaTypes = require('./media/types');
 const mediaQueries = require('./media/queries');
@@ -47,9 +39,21 @@ const shareTypes = require('./share/types');
 const shareQueries = require('./share/queries');
 const shareMutations = require('./share/mutations');
 
+const productTypes = require('./product/types');
+const productQueries = require('./product/queries');
+const productMutations = require('./product/mutations');
+
+const orderTypes = require('./order/types');
+const orderQueries = require('./order/queries');
+const orderMutations = require('./order/mutations');
+
 const partnerTypes = require('./partner/types');
 const partnerQueries = require('./partner/queries');
 const partnerMutations = require('./partner/mutations');
+
+const customerTypes = require('./customer/types');
+const customerQueries = require('./customer/queries');
+const customerMutations = require('./customer/mutations');
 
 const types = [
   ...sharedTypes,
@@ -57,13 +61,14 @@ const types = [
   ...authTypes,
   ...auditLogTypes,
   ...settingsTypes,
-  ...customerTypes,
-  ...productTypes,
-  ...orderTypes,
+  ...appsTypes,
   ...mediaTypes,
   ...signTypes,
   ...shareTypes,
+  ...productTypes,
+  ...orderTypes,
   ...partnerTypes,
+  ...customerTypes,
 ].map((type) => type.resolver);
 
 const queries = [
@@ -71,13 +76,14 @@ const queries = [
   ...authQueries,
   ...auditLogQueries,
   ...settingsQueries,
-  ...customerQueries,
-  ...productQueries,
-  ...orderQueries,
+  ...appsQueries,
   ...mediaQueries,
   ...signQueries,
   ...shareQueries,
+  ...productQueries,
+  ...orderQueries,
   ...partnerQueries,
+  ...customerQueries,
 ].map((query) => query.resolver);
 
 const mutations = [
@@ -85,13 +91,14 @@ const mutations = [
   ...authMutations,
   ...auditLogMutations,
   ...settingsMutations,
-  ...customerMutations,
-  ...productMutations,
-  ...orderMutations,
+  ...appsMutations,
   ...mediaMutations,
   ...signMutations,
   ...shareMutations,
+  ...productMutations,
+  ...orderMutations,
   ...partnerMutations,
+  ...customerMutations,
 ].map((mutation) => mutation.resolver);
 
 module.exports = mergeResolvers(types, queries, mutations);

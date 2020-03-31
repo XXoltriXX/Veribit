@@ -10,12 +10,14 @@ import FormWrapper, {
 } from 'view/shared/styles/FormWrapper';
 import FormSchema from 'view/shared/form/formSchema';
 import InputFormItem from 'view/shared/form/items/InputFormItem';
+import FilesFormItem from 'view/shared/form/items/FilesFormItem';
 
 const { fields } = model;
 
 class SignForm extends Component {
   schema = new FormSchema(fields.id, [
     fields.txid,
+    fields.documents,
   ]);
 
   handleSubmit = (values) => {
@@ -52,6 +54,17 @@ class SignForm extends Component {
                   label={fields.txid.label}
                   required={fields.txid.required}
                   autoFocus
+                />
+                <FilesFormItem
+                  name={fields.documents.name}
+                  label={fields.documents.label}
+                  required={fields.documents.required}
+                  path={fields.documents.path}
+                  schema={{
+                    size: fields.documents.size,
+                    formats: fields.documents.formats,
+                  }}
+                  max={fields.documents.max}
                 />
 
                 <Form.Item

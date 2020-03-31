@@ -172,6 +172,18 @@ class MediaRepository {
         };
       }
 
+      if (filter.description) {
+        criteria = {
+          ...criteria,
+          description: {
+            $regex: MongooseQueryUtils.escapeRegExp(
+              filter.description,
+            ),
+            $options: 'i',
+          },
+        };
+      }
+
       if (filter.createdAtRange) {
         const [start, end] = filter.createdAtRange;
 

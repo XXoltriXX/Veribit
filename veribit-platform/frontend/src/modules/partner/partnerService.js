@@ -85,6 +85,11 @@ export default class PartnerService {
           partnerFind(id: $id) {
             id
             txid
+            list {
+              id
+              fullName
+              email
+            }
             createdAt
             updatedAt
           }
@@ -118,6 +123,11 @@ export default class PartnerService {
             rows {
               id
               txid
+              list {
+                id
+                fullName
+                email
+              }
               updatedAt
               createdAt
             }

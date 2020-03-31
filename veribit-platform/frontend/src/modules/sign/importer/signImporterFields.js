@@ -4,4 +4,5 @@ const { fields } = model;
 
 export default [
   fields.txid,
+  fields.documents,
 ];

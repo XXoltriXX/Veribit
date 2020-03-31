@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Spinner from 'view/shared/Spinner';
 import ViewWrapper from 'view/shared/styles/ViewWrapper';
 import TextViewItem from 'view/shared/view/TextViewItem';
-
+import FilesViewItem from 'view/shared/view/FilesViewItem';
 
 const { fields } = model;
 
@@ -21,6 +21,11 @@ class SignView extends Component {
         <TextViewItem
           label={fields.txid.label}
           value={fields.txid.forView(record.txid)}
+        />
+
+        <FilesViewItem
+          label={fields.documents.label}
+          value={fields.documents.forView(record.documents)}
         />
 
         <TextViewItem

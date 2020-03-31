@@ -26,55 +26,207 @@ const ptBR = {
   },
 
   entities: {
-    customer: {
-      name: 'Customer',
-      label: 'Customers',
-      menu: 'Customers',
-      exporterFileName: 'Customer_exportados',
+    apps: {
+      name: 'Apps',
+      label: 'Apps',
+      menu: 'Apps',
+      exporterFileName: 'Apps_exportados',
       list: {
-        menu: 'Customers',
-        title: 'Customers',
+        menu: 'Apps',
+        title: 'Apps',
       },
       create: {
-        success: 'Customer salvo com sucesso',
+        success: 'Apps salvo com sucesso',
       },
       update: {
-        success: 'Customer salvo com sucesso',
+        success: 'Apps salvo com sucesso',
       },
       destroy: {
-        success: 'Customer deletado com sucesso',
+        success: 'Apps deletado com sucesso',
       },
       destroyAll: {
-        success: 'Customer(s) deletado com sucesso',
+        success: 'Apps(s) deletado com sucesso',
       },
       edit: {
-        title: 'Editar Customer',
+        title: 'Editar Apps',
       },
       fields: {
         id: 'Id',
-        'name': 'Name',
-        'birthdateRange': 'Birthdate',
-        'birthdate': 'Birthdate',
-        'gender': 'Gender',
+        'novi': 'Novi',
+        'levo': 'Levo',
+        'nosco': 'Nosco',
+        'scio': 'Scio',
+        'disco': 'Disco',
+        'indicium': 'Indicium',
+        'specto': 'Specto',
+        'intelligo': 'Intelligo',
+        'teneo': 'Teneo',
+        'percipio': 'Percipio',
+        'antikythera': 'Antikythera',
         createdAt: 'Criado em',
         updatedAt: 'Atualizado em',
         createdAtRange: 'Criado em',
       },
       enumerators: {
-        'gender': {
-          'male': 'Male',
-          'female': 'Female',
-        },
+
       },
       new: {
-        title: 'Novo Customer',
+        title: 'Novo Apps',
       },
       view: {
-        title: 'Visualizar Customer',
+        title: 'Visualizar Apps',
       },
       importer: {
-        title: 'Importar Customers',
-        fileName: 'customer_template_importacao',
+        title: 'Importar Apps',
+        fileName: 'apps_template_importacao',
+        hint:
+          'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
+      },
+    },
+
+    media: {
+      name: 'Media',
+      label: 'Media',
+      menu: 'Media',
+      exporterFileName: 'Media_exportados',
+      list: {
+        menu: 'Media',
+        title: 'Media',
+      },
+      create: {
+        success: 'Media salvo com sucesso',
+      },
+      update: {
+        success: 'Media salvo com sucesso',
+      },
+      destroy: {
+        success: 'Media deletado com sucesso',
+      },
+      destroyAll: {
+        success: 'Media(s) deletado com sucesso',
+      },
+      edit: {
+        title: 'Editar Media',
+      },
+      fields: {
+        id: 'Id',
+        'txid': 'Location',
+        'files': 'Files',
+        'images': 'Images',
+        'description': 'Description',
+        createdAt: 'Criado em',
+        updatedAt: 'Atualizado em',
+        createdAtRange: 'Criado em',
+      },
+      enumerators: {
+
+      },
+      new: {
+        title: 'Novo Media',
+      },
+      view: {
+        title: 'Visualizar Media',
+      },
+      importer: {
+        title: 'Importar Media',
+        fileName: 'media_template_importacao',
+        hint:
+          'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
+      },
+    },
+
+    sign: {
+      name: 'Sign',
+      label: 'Signs',
+      menu: 'Signs',
+      exporterFileName: 'Sign_exportados',
+      list: {
+        menu: 'Signs',
+        title: 'Signs',
+      },
+      create: {
+        success: 'Sign salvo com sucesso',
+      },
+      update: {
+        success: 'Sign salvo com sucesso',
+      },
+      destroy: {
+        success: 'Sign deletado com sucesso',
+      },
+      destroyAll: {
+        success: 'Sign(s) deletado com sucesso',
+      },
+      edit: {
+        title: 'Editar Sign',
+      },
+      fields: {
+        id: 'Id',
+        'txid': 'Location',
+        'documents': 'Documents',
+        createdAt: 'Criado em',
+        updatedAt: 'Atualizado em',
+        createdAtRange: 'Criado em',
+      },
+      enumerators: {
+
+      },
+      new: {
+        title: 'Novo Sign',
+      },
+      view: {
+        title: 'Visualizar Sign',
+      },
+      importer: {
+        title: 'Importar Signs',
+        fileName: 'sign_template_importacao',
+        hint:
+          'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
+      },
+    },
+
+    share: {
+      name: 'Share',
+      label: 'Share',
+      menu: 'Share',
+      exporterFileName: 'Share_exportados',
+      list: {
+        menu: 'Share',
+        title: 'Share',
+      },
+      create: {
+        success: 'Share salvo com sucesso',
+      },
+      update: {
+        success: 'Share salvo com sucesso',
+      },
+      destroy: {
+        success: 'Share deletado com sucesso',
+      },
+      destroyAll: {
+        success: 'Share(s) deletado com sucesso',
+      },
+      edit: {
+        title: 'Editar Share',
+      },
+      fields: {
+        id: 'Id',
+        'txid': 'Location',
+        createdAt: 'Criado em',
+        updatedAt: 'Atualizado em',
+        createdAtRange: 'Criado em',
+      },
+      enumerators: {
+
+      },
+      new: {
+        title: 'Novo Share',
+      },
+      view: {
+        title: 'Visualizar Share',
+      },
+      importer: {
+        title: 'Importar Share',
+        fileName: 'share_template_importacao',
         hint:
           'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
       },
@@ -184,150 +336,6 @@ const ptBR = {
       },
     },
 
-    media: {
-      name: 'Media',
-      label: 'Media',
-      menu: 'Media',
-      exporterFileName: 'Media_exportados',
-      list: {
-        menu: 'Media',
-        title: 'Media',
-      },
-      create: {
-        success: 'Media salvo com sucesso',
-      },
-      update: {
-        success: 'Media salvo com sucesso',
-      },
-      destroy: {
-        success: 'Media deletado com sucesso',
-      },
-      destroyAll: {
-        success: 'Media(s) deletado com sucesso',
-      },
-      edit: {
-        title: 'Editar Media',
-      },
-      fields: {
-        id: 'Id',
-        'txid': 'Location',
-        createdAt: 'Criado em',
-        updatedAt: 'Atualizado em',
-        createdAtRange: 'Criado em',
-      },
-      enumerators: {
-
-      },
-      new: {
-        title: 'Novo Media',
-      },
-      view: {
-        title: 'Visualizar Media',
-      },
-      importer: {
-        title: 'Importar Media',
-        fileName: 'media_template_importacao',
-        hint:
-          'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
-      },
-    },
-
-    sign: {
-      name: 'Sign',
-      label: 'Signs',
-      menu: 'Signs',
-      exporterFileName: 'Sign_exportados',
-      list: {
-        menu: 'Signs',
-        title: 'Signs',
-      },
-      create: {
-        success: 'Sign salvo com sucesso',
-      },
-      update: {
-        success: 'Sign salvo com sucesso',
-      },
-      destroy: {
-        success: 'Sign deletado com sucesso',
-      },
-      destroyAll: {
-        success: 'Sign(s) deletado com sucesso',
-      },
-      edit: {
-        title: 'Editar Sign',
-      },
-      fields: {
-        id: 'Id',
-        'txid': 'Location',
-        createdAt: 'Criado em',
-        updatedAt: 'Atualizado em',
-        createdAtRange: 'Criado em',
-      },
-      enumerators: {
-
-      },
-      new: {
-        title: 'Novo Sign',
-      },
-      view: {
-        title: 'Visualizar Sign',
-      },
-      importer: {
-        title: 'Importar Signs',
-        fileName: 'sign_template_importacao',
-        hint:
-          'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
-      },
-    },
-
-    share: {
-      name: 'Share',
-      label: 'Share',
-      menu: 'Share',
-      exporterFileName: 'Share_exportados',
-      list: {
-        menu: 'Share',
-        title: 'Share',
-      },
-      create: {
-        success: 'Share salvo com sucesso',
-      },
-      update: {
-        success: 'Share salvo com sucesso',
-      },
-      destroy: {
-        success: 'Share deletado com sucesso',
-      },
-      destroyAll: {
-        success: 'Share(s) deletado com sucesso',
-      },
-      edit: {
-        title: 'Editar Share',
-      },
-      fields: {
-        id: 'Id',
-        'txid': 'Location',
-        createdAt: 'Criado em',
-        updatedAt: 'Atualizado em',
-        createdAtRange: 'Criado em',
-      },
-      enumerators: {
-
-      },
-      new: {
-        title: 'Novo Share',
-      },
-      view: {
-        title: 'Visualizar Share',
-      },
-      importer: {
-        title: 'Importar Share',
-        fileName: 'share_template_importacao',
-        hint:
-          'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
-      },
-    },
-
     partner: {
       name: 'Partner',
       label: 'Partners',
@@ -355,6 +363,7 @@ const ptBR = {
       fields: {
         id: 'Id',
         'txid': 'Location',
+        'list': 'List',
         createdAt: 'Criado em',
         updatedAt: 'Atualizado em',
         createdAtRange: 'Criado em',
@@ -371,6 +380,60 @@ const ptBR = {
       importer: {
         title: 'Importar Partners',
         fileName: 'partner_template_importacao',
+        hint:
+          'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
+      },
+    },
+
+    customer: {
+      name: 'Customer',
+      label: 'Customers',
+      menu: 'Customers',
+      exporterFileName: 'Customer_exportados',
+      list: {
+        menu: 'Customers',
+        title: 'Customers',
+      },
+      create: {
+        success: 'Customer salvo com sucesso',
+      },
+      update: {
+        success: 'Customer salvo com sucesso',
+      },
+      destroy: {
+        success: 'Customer deletado com sucesso',
+      },
+      destroyAll: {
+        success: 'Customer(s) deletado com sucesso',
+      },
+      edit: {
+        title: 'Editar Customer',
+      },
+      fields: {
+        id: 'Id',
+        'name': 'Name',
+        'birthdateRange': 'Birthdate',
+        'birthdate': 'Birthdate',
+        'gender': 'Gender',
+        createdAt: 'Criado em',
+        updatedAt: 'Atualizado em',
+        createdAtRange: 'Criado em',
+      },
+      enumerators: {
+        'gender': {
+          'male': 'Male',
+          'female': 'Female',
+        },
+      },
+      new: {
+        title: 'Novo Customer',
+      },
+      view: {
+        title: 'Visualizar Customer',
+      },
+      importer: {
+        title: 'Importar Customers',
+        fileName: 'customer_template_importacao',
         hint:
           'Arquivos/Imagens devem ser as URLs dos arquivos, separados por espaço. Relacionamentos devem ser os IDs separados por espaço.',
       },
@@ -449,29 +512,13 @@ const ptBR = {
       description:
         'Acesso de visualização a todas as entidades',
     },
-    customerEditor: {
-      label: 'Editor de Customers',
-      description: 'Acesso de edição aos Customers',
+    appsEditor: {
+      label: 'Editor de Apps',
+      description: 'Acesso de edição aos Apps',
     },
-    customerViewer: {
-      label: 'Visualizador de Customers',
-      description: 'Acesso de visualização aos Customers',
-    },
-    productEditor: {
-      label: 'Editor de Products',
-      description: 'Acesso de edição aos Products',
-    },
-    productViewer: {
-      label: 'Visualizador de Products',
-      description: 'Acesso de visualização aos Products',
-    },
-    orderEditor: {
-      label: 'Editor de Orders',
-      description: 'Acesso de edição aos Orders',
-    },
-    orderViewer: {
-      label: 'Visualizador de Orders',
-      description: 'Acesso de visualização aos Orders',
+    appsViewer: {
+      label: 'Visualizador de Apps',
+      description: 'Acesso de visualização aos Apps',
     },
     mediaEditor: {
       label: 'Editor de Media',
@@ -497,6 +544,22 @@ const ptBR = {
       label: 'Visualizador de Share',
       description: 'Acesso de visualização aos Share',
     },
+    productEditor: {
+      label: 'Editor de Products',
+      description: 'Acesso de edição aos Products',
+    },
+    productViewer: {
+      label: 'Visualizador de Products',
+      description: 'Acesso de visualização aos Products',
+    },
+    orderEditor: {
+      label: 'Editor de Orders',
+      description: 'Acesso de edição aos Orders',
+    },
+    orderViewer: {
+      label: 'Visualizador de Orders',
+      description: 'Acesso de visualização aos Orders',
+    },
     partnerEditor: {
       label: 'Editor de Partners',
       description: 'Acesso de edição aos Partners',
@@ -504,6 +567,14 @@ const ptBR = {
     partnerViewer: {
       label: 'Visualizador de Partners',
       description: 'Acesso de visualização aos Partners',
+    },
+    customerEditor: {
+      label: 'Editor de Customers',
+      description: 'Acesso de edição aos Customers',
+    },
+    customerViewer: {
+      label: 'Visualizador de Customers',
+      description: 'Acesso de visualização aos Customers',
     },
   },
 

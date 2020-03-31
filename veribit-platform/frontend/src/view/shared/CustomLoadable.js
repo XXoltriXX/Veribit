@@ -1,15 +1,12 @@
-import Loadable from 'react-loadable';
+import React from 'react';
 import LoadingComponent from 'view/shared/LoadingComponent';
 
 export default function CustomLoadable(opts) {
-  return Loadable(
-    Object.assign(
-      {
-        loading: LoadingComponent,
-        delay: 200,
-        timeout: 10000,
-      },
-      opts,
-    ),
+  const LazyComponent = React.lazy(opts.loader);
+
+  return (props) => (
+    <React.Suspense fallback={<LoadingComponent />}>
+      <LazyComponent {...props} />
+    </React.Suspense>
   );
 }

@@ -4,7 +4,7 @@ Metanet Entity Access Management
 * This is currently an early Alpha pre-build and is not production ready.
 
 ### Build
-Veribit v0.0.9 Alpha
+Veribit v0.0.10 Alpha
 
 ### Description
 Veribit is an early-alpha platform that manages entity identity and verification for globally connected Metanet applications on the Bitcoin SV blockchain. Entities include users, products, licences, documents and media, either peer-to-peer, peer-to-machine or machine-to-mahine (P2P, P2M & M2M). This helps users and other entities to track, trace and log interactions such as logins, IoT, logistics, freight, customs, border control, taxation, automata, trusts, deeds, equities, intellectual property, identity, AML, KYC and much, much more. Many regulations that bind financial companies in a KYC ("Know Your Customer" / "Know Your Client") process also apply to all crytocurrency projects. We have a simple utility that can be plugged into any service, application or dashboard via API, subject to those regulations that help collect the necessary user info for compliance.

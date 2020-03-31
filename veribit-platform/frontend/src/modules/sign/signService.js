@@ -85,6 +85,13 @@ export default class SignService {
           signFind(id: $id) {
             id
             txid
+            documents {
+              id
+              name
+              sizeInBytes
+              publicUrl
+              privateUrl
+            }
             createdAt
             updatedAt
           }
@@ -118,6 +125,13 @@ export default class SignService {
             rows {
               id
               txid
+              documents {
+                id
+                name
+                sizeInBytes
+                publicUrl
+                privateUrl
+              }
               updatedAt
               createdAt
             }
